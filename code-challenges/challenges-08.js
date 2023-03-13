@@ -64,7 +64,6 @@ const getEntries = (obj) => {
   let arr = [];
   for (const [key, value] of Object.entries(obj)) {
     arr.push(`${key}: ${value}`);
-
   }
   return arr;
   // write your code here
