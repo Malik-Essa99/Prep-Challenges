@@ -124,7 +124,8 @@ const employeesBonus = (arr) => {
     }
     );
 
-    result.forEach(function (element) {
+    result.forEach(element => {
+        
         if (element.workHours > 8) {
             element.salary = parseInt(element.salary) + 100 + "$";
         } else {
