@@ -132,7 +132,8 @@ function gradesAvg(arr) {
 
         let sum = arr.gradsList.reduce(function(total, grade) {
           return total + grade;
-        }, 0);
+        }, 0)
+        
         let avg = sum / arr.gradsList.length;
         
         return {
