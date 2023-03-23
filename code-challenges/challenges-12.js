@@ -102,8 +102,8 @@ const cvsFiltration = (arr) => {
 // 
 
 const vowelsFiltration = (arr) => {
-    let notIncludeStr = ['a','e','i','o','u']
-    const result = arr.filter(word => !word.includes(notIncludeStr));
+
+    const result = arr.filter(word => !/[aeiou]/.test(word));
 
     return result;
     // write your code here

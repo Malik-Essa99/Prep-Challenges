@@ -90,7 +90,7 @@ describe("Challenge12-02", () => {
 });
 
 describe("Challenge12-03", () => {
-  test.skip("words_without_vowels", () => {
+  test("words_without_vowels", () => {
     expect(vowelsFiltration(["car", "spy", "dry"])).toEqual(["spy", "dry"]);
     expect(vowelsFiltration(["boy", "building", "why"])).toEqual(["why"]);
     expect(vowelsFiltration(["sad", "angry", "lovely", "fresh"])).toEqual([]);
