@@ -15,9 +15,44 @@
 //
 
 const recursionPattern = (int1, int2) => {
-    array.forEach(element => {
-        
-    });
+    let check = false;
+    let arr = [];
+
+    function recurs(num, decrement) {
+        if (check == false && num <= int1) {
+
+            if (num > 0) {
+                arr.push(num)
+                recurs(num - decrement, decrement)
+            } else {
+                check = true;
+                arr.push(num)
+                recurs(num + decrement, decrement)
+
+            }
+        } else if(check == true && num <= int1 ){
+            if (num > 0) {
+                arr.push(num)
+                recurs(num + decrement, decrement)
+            } else {
+                check = false;
+                arr.push(num)
+                recurs(num - decrement, decrement)
+
+            }
+        }
+
+
+        // else if (num < 0) {
+
+        // } else if (num < 0) {
+        //     arr.push(num)
+        //     recurs(num - decrement, -decrement)
+        // }
+    }
+
+    recurs(int1, int2);
+    return arr;
     // write your code here
 
 }
@@ -66,10 +101,10 @@ const filterLinks = (str) => {
 //
 
 const isPalindrome = (str) => {
-    for (let index = 0; index < array.length; index++) {
-        const element = array[index];
-        
-    }
+
+    let palindrome = str.toLowerCase().replace(/[^A-Za-z]/g, '');
+    let check = palindrome.split("").reverse().join("");
+    return palindrome === check
     // write your code here
 }
 // -------------------------------------------------------------------------------------------------------
